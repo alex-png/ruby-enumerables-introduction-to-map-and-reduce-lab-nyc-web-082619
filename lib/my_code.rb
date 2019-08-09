@@ -49,17 +49,14 @@ count = 0
 end
 
 def reduce_to_all_true(source_array)
-  count = 0
-  sze = source_array.length
-  while count < sze 
-      if source_array[count] == true
-    source_array = true
-    elsif source_array[count] == false 
-      source_array = false
+   i = 0 
+  while i < source_array.length do 
+    if (source_array[i] == false)
+      return false
     end
-    count += 1 
+    i += 1
   end
-!!source_array
+  return true
 end
 
 def reduce_to_any_true(source_array)
